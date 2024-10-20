@@ -1,0 +1,46 @@
+#borders {
+    position: absolute;
+    height: 400px;
+    width: 800px;
+    margin: -200px 0 0 -420px;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border: 20px solid rgb(138, 138, 237);
+}
+
+.bubble {
+    display: inline-block;
+    width: 100px;
+    color: black;
+    height: 100%;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+    background: radial-gradient(circle at 50% 55%, rgba(240, 245, 255, 0.9), rgba(240, 245, 255, 0.9) 40%,
+            rgba(225, 238, 255, 0.8) 60%, rgba(43, 130, 255, 0.4));
+    animation-name: popping;
+    animation-duration: 2.0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.bubble:before {
+    content: "";
+    display: inline-block;
+    padding-top: 100%;
+}
+
+@keyframes popping {
+    0% {
+        transform: scale(0.2);
+    }
+
+    98% {
+        transform: scale(1.0);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
